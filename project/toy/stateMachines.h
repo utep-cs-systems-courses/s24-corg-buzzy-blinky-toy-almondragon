@@ -14,10 +14,10 @@ void state_twinkle();
 void state_hushBaby();
 void state_rockBaby();
 void state_sunshine();
-void state_waiting();
-void transition_state(State next_state);
-void update_250th();
-void sec();
+//void state_waiting();
+//void transition_state(State next_state);
+//void update_250th();
+//void sec();
 
 extern State current_state;
 

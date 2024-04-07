@@ -6,7 +6,9 @@
 
 void buzzer_init();
 void buzzer_set_period(short cycles);
-
-// to add variables
+void twinkle_song();
+void hushBaby_song();
+void rockBaby_song();
+void sunshine_song();
 
 #endif
