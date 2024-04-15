@@ -11,4 +11,6 @@ void hushBaby_song();
 void rockBaby_song();
 void sunshine_song();
 
+extern int buzzer_sec;
+extern char counter_buzzer_sec;
 #endif
