@@ -27,5 +27,5 @@ void state_sunshine(){
 }
 
 void state_waiting(){
-  lightOn();
+  lightsOff();
 }
