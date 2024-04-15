@@ -4,7 +4,7 @@
 #include "led.h"
 
 
-char switch_update_interrupt_sense()
+static char switch_update_interrupt_sense()
 {
   char p2val = P2IN;
   P2IES |= (p2val & SWITCHES);
@@ -14,7 +14,7 @@ char switch_update_interrupt_sense()
 void switch_init()
 {
   P2REN |= SWITCHES;
-  P2IE |= SWITTCHES;
+  P2IE |= SWITCHES;
   P2OUT |= SWITCHES;
   P2DIR &= ~SWITCHES;
 }
@@ -28,16 +28,16 @@ void switch_interrupt_handler()
   char button4 = (p2val & SW4) ? 0 : 1;
 
   if (button1){
-    current_state = //
+    current_state = twinkle;
   }
   else if (button2){
-    current_state = //
+    current_state = hushBaby;
   }
   else if (button3) {
-    current_state = //
+    current_state = rockBaby;
   }
   else if (button4){
-    current_state = //
+    current_state = sunshine;
   }
   
 }

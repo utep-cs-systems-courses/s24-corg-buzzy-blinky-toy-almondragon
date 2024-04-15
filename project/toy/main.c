@@ -5,10 +5,10 @@
 
 
 void main(void){
-  configueClocks();
+  configureClocks();
   enableWDTInterrupts();
   switch_init();
-  //led_inint();
+  led_init();
   buzzer_init();
   or_sr(0x18);
 }

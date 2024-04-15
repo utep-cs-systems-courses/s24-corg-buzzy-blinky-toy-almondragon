@@ -2,11 +2,11 @@
 #define stateMachine_included
 
 typedef enum{
+  waiting = 0,
   twinkle,
   hushBaby,
   rockBaby,
-  sunshine,
-  waiting = 0,
+  sunshine
 } State;
 
 

@@ -6,7 +6,7 @@
 #define SW3 BIT2 // button 3 -> p2.2
 #define SW4 BIT3 // button 4 -> p2.3
 
-#define SWITCHES (SW1 | SW2 | SW3 | SW4) // all of the switches
+#define SWITCHES (SW1|SW2|SW3|SW4) // all of the switches
 
 
 void switch_init();
