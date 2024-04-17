@@ -12,7 +12,7 @@ void state_twinkle(){
 
 void state_hushBaby(){
   hushBaby_song();
-  led_greenOn();
+  led_redOn();
 
 }
 
