@@ -28,16 +28,18 @@ void switch_interrupt_handler()
   char button4 = (p2val & SW4) ? 0 : 1;
 
   if (button1){
-    current_state = twinkle;
+    P1OUT |= LED_RED;
+    P1OUT &= ~LED_GREEN;
   }
-  else if (button2){
-    current_state = hushBaby;
+  if (button2){
+    P1OUT |= LED_GREEN;
+    P1OUT &= ~LED_RED;
   }
-  else if (button3) {
-    current_state = rockBaby;
+  if (button3) {
+    P1OUT |= LEDS;
   }
-  else if (button4){
-    current_state = sunshine;
+  if (button4){
+    P1OUT &= ~LEDS;
   }
   
 }
