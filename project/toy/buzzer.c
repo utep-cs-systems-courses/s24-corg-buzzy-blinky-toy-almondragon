@@ -25,7 +25,7 @@ void twinkle_song(){
   if(counter_buzzer_sec == 44){
     counter_buzzer_sec = 0;
   }
-  if(buzzer_sec >250){
+  if(buzzer_sec >65){
     buzzer_sec = 0;
     counter_buzzer_sec++;
     buzzer_set_period(notes[counter_buzzer_sec-1]);
