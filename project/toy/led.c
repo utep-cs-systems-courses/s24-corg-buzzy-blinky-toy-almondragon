@@ -3,6 +3,12 @@
 #include "libTimer.h"
 #include "stateMachines.h"
 
+
+char green_dim_start = 4;
+char red_bright_start = 1;
+char green_count = 0;
+char red_count = 0;
+
 int led_sec = 0;
 char counter_led_sec = 0;
 
@@ -131,6 +137,31 @@ void sunshine_led(){
 }
 
 void DTB_BTD(){
-
-
+  green_count++;
+  if(green_count >= green_dim_start){
+    green_count = 0;
+    P1OUT |= LED_GREEN;
+  } else if (green_count < green_dim_start){
+    P1OUT &= ~LED_GREEN;
+  }
+  if(red_count >= red_bright_start){
+    red_count = 0;
+    P1OUT|= LED_RED;
+  } else if(red_count < red_bright_start){
+    P1OUT &= ~LED_RED;
+  }
+  red_count++;
+  led_sec++;
+  if(led_sec >= 250){
+    led_sec = 0;
+    red_bright_start++;
+    green_dim_start--;
+    if(green_dim_start <= 0){
+      green_dim_start = 4;
+    }
+    if(red_bright_start > 4){
+      red_bright_start = 1;
+    }
+  }
+  
 }

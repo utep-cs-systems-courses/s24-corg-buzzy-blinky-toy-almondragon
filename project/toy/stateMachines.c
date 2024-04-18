@@ -22,14 +22,14 @@ void state_rockBaby(){
 }
 
 void state_sunshine(){
-  sunshine_song();
+  // sunshine_song();
   sunshine_led();
   
 }
 
 void state_waiting(){
   buzzer_set_period(0);
-  lightOn();
+  DTB_BTD();
 }
 void transition_state(State next_state){
   current_state = next_state;
