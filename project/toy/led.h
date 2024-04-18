@@ -23,6 +23,6 @@ void rock_led();
 
 void sunshine_led();
 
-//void DTB_BTD();
+void DTB_BTD();
 
 #endif
