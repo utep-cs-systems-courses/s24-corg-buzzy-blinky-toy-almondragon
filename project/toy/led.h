@@ -15,13 +15,13 @@ void lightOn();
 
 void lightsOff();
 
-//void twinkle_led();
+void twinkle_led();
 
-//void hush_led();
+void hush_led();
 
-//void rock_led();
+void rock_led();
 
-//void sunshine_led();
+void sunshine_led();
 
 //void DTB_BTD();
 

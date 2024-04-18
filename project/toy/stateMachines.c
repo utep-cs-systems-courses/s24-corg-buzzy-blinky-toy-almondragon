@@ -7,25 +7,29 @@ State current_state = waiting;
 
 void state_twinkle(){
   twinkle_song();
-  led_greenOn();
+  twinkle_led;
 }
 
 void state_hushBaby(){
   hushBaby_song();
-  led_redOn();
+  hush_led();
 
 }
 
 void state_rockBaby(){
   rockBaby_song();
-  lightOn();
+  rock_led();
 }
 
 void state_sunshine(){
   sunshine_song();
+  //sunshine_led();
   lightsOff();
 }
 
 void state_waiting(){
-  lightsOff();
+  lightOn();
+}
+void transition_state(State next_state){
+  current_state = next_state;
 }
