@@ -54,7 +54,7 @@ void rockBaby_song(){
   if (counter_buzzer_sec == 44){
     counter_buzzer_sec = 0;
   }
-  if (buzzer_sec > 65){
+  if (buzzer_sec > 70){
     buzzer_sec = 0;
     counter_buzzer_sec++;
     buzzer_set_period(notes[counter_buzzer_sec-1]);
@@ -65,10 +65,10 @@ void rockBaby_song(){
 void sunshine_song(){
   int notes[72] = {7644, 0, 7644, 0, 6067, 0, 6067, 0, 5102, 0, 5102, 0, 6067, 0, 7644, 0, 7644, 0, 6067, 0, 6067, 0, 5102, 0, 5102, 0, 6067, 0, 7644, 0, 6067, 0, 5102, 0, 6067, 0, 7644, 0, 6067, 0, 5102, 0, 6067, 0, 7644, 0, 6067, 0, 5102, 0, 6067, 0, 7644, 0, 7644, 0, 6067, 0, 6067, 0, 5102};
   buzzer_sec++;
-  if (counter_buzzer_sec == 72){
+  if (counter_buzzer_sec == 68){
     counter_buzzer_sec = 0;
   }
-  if (buzzer_sec > 75){
+  if (buzzer_sec > 60){
     buzzer_sec = 0;
     counter_buzzer_sec++;
     buzzer_set_period(notes[counter_buzzer_sec-1]);
