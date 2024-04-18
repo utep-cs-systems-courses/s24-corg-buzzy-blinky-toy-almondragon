@@ -40,7 +40,7 @@ void hushBaby_song(){
   if(counter_buzzer_sec == 37){
     counter_buzzer_sec = 0;
   }
-  if(buzzer_sec > 250){
+  if(buzzer_sec > 80){
     buzzer_sec = 0;
     counter_buzzer_sec++;
     buzzer_set_period(notes[counter_buzzer_sec-1]);
@@ -54,7 +54,7 @@ void rockBaby_song(){
   if (counter_buzzer_sec == 44){
     counter_buzzer_sec = 0;
   }
-  if (buzzer_sec > 250){
+  if (buzzer_sec > 65){
     buzzer_sec = 0;
     counter_buzzer_sec++;
     buzzer_set_period(notes[counter_buzzer_sec-1]);
@@ -68,7 +68,7 @@ void sunshine_song(){
   if (counter_buzzer_sec == 72){
     counter_buzzer_sec = 0;
   }
-  if (buzzer_sec > 250){
+  if (buzzer_sec > 75){
     buzzer_sec = 0;
     counter_buzzer_sec++;
     buzzer_set_period(notes[counter_buzzer_sec-1]);
