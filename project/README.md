@@ -8,13 +8,19 @@ lullabies adorned with a corressponding light show.
 To compile, use all the corresponding commands of the Makefile listed below in
 order to build the music box.
 
-'''bash
-make all
-cd toy/
-make load
-cd ..
-make clean
-'''
+```BASH
+
+MAKE ALL
+
+CD TOY/
+
+MAKE LOAD
+
+CD ..
+
+MAKE CLEAN
+
+```
 
 ##USE
 To play your favorite lullabies with the light show, click on the designated
