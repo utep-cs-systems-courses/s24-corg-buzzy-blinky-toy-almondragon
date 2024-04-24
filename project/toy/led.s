@@ -203,6 +203,7 @@ counter_led_sec:	.byte 0
 	.global hush_led
 	.global rock_led
 	.global sunshine_led
+	.global DTB_BTD
 	.extern P1OUT
 	.extern P1DIR
 
@@ -238,7 +239,28 @@ lightsOff:
 	pop r0
 
 twinkle_led:
-twinkle_else:	
+	cmp.b #44, &counter_led_sec
+	jnz twinkle_else
+	mov.b #0, &counter_led_sec
+	mov #0, r12
+	call #transition
+twinkle_else:
+	inc &led_sec
+	cmp #65, &led_sec
+	jnc end
+	mov #0, &led_sec
+	inc.b &counter_led_sec
+	mov.b &counter_led_sec, r12
+	sub #1, r12
+	mov.b twinkle_lights(r12), r13
+	cmp.b #0, r13
+	jnz lights_zero
+	cmp.b #1, r13
+	jnz lights_one
+	cmp.b #2, r13
+	jnz lights_two
+	cmp.b #3, r13
+	jnz lights_three
 
 hush_led:
 huhs_else:	
@@ -249,3 +271,17 @@ rock_else:
 sunshine_led:
 sunshine_else:	
 	
+lights_zero:
+	push #end
+	mov #lightsOff, r0
+lights_one:
+	push #end
+	mov #led_redOn, r0
+lights_two:
+	push #end
+	mov #led_greenOn, r0
+lights_three:
+	push #end
+	mov #lightOn, r0
+end:
+	ret
