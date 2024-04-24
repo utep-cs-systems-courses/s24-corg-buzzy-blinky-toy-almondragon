@@ -20,7 +20,7 @@ make clean
 
 ```
 
-##USE
+## USE
 To play your favorite lullabies with the light show, click on the designated
 buttons.
 
