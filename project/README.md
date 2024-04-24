@@ -6,19 +6,17 @@ lullabies adorned with a corressponding light show.
 
 ## COMPILE
 To compile, use all the corresponding commands of the Makefile listed below in
-order to build the music box.
+order to build the music box. Type in the directed order in the terminal for
+proper performance.
 
 ```BASH
 
-MAKE ALL
-
-CD TOY/
-
-MAKE LOAD
-
-CD ..
-
-MAKE CLEAN
+make all
+cd toy/
+make load
+make clean
+cd ..
+make clean
 
 ```
 
