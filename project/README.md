@@ -1,10 +1,10 @@
 # LULLABY MUSIC BOX - Aitiana Mondragon
 
-##DESCRIPTION
+## DESCRIPTION
 The lullaby music box is a program catered for the MSP430 that plays classic
 lullabies adorned with a corressponding light show.
 
-##COMPILE
+## COMPILE
 To compile, use all the corresponding commands of the Makefile listed below in
 order to build the music box.
 
