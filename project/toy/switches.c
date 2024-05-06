@@ -27,6 +27,8 @@ void switch_interrupt_handler()
   char button3 = (p2val & SW3) ? 0 : 1;
   char button4 = (p2val & SW4) ? 0 : 1;
 
+  // setting each button to a respective state when pressed
+
   if (button1){
     current_state = twinkle;
   }

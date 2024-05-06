@@ -6,8 +6,8 @@
 State current_state = waiting;
 
 void state_twinkle(){
-  twinkle_song();
-  twinkle_led();
+  twinkle_song(); // plays song --> same ideology for all functions below with their respective song
+  twinkle_led(); // does light show --> same ideology for all functions below with their respective song
 }
 
 void state_hushBaby(){
